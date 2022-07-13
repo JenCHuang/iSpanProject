@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Main Form</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="things/additional.css">
+    <style></style>
+</head>
+
+<body class="bg-light">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-header">
+            <img id='headimg' src="things/img/Logoslogan_sm.png" alt="iSpan" width="100">
+        </div>
+        <div class="container-fluid nav-style">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">新客戶表單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">資料查詢</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">分析報告</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+                <li id="nav-login-btn" class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
+                <li id="nav-logout-btn" class="nav-item"><a href="#" class="nav-link">Sign out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container container_main">
+        <div class="py-5 text-center">
+            <h2>貸款申請表單</h2>
+        </div>
+
+        <form class="needs-validation" novalidate>
+            <hr class="my-4">
+            <div class="row g-3">
+                <div class="col-sm-2">
+                    <label for="lastName" class="form-label">姓氏</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        姓氏是必填欄位
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="firstName" class="form-label">名字</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        名字是必填欄位
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="gender" class="form-label">性別</label>
+                    <div class="form-control adding-form-pattrn">
+                        <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male">
+                        <label class="form-check-label" for="gender-male">男</label>
+                        <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female">
+                        <label class="form-check-label" for="gender-female">女</label>
+                        <input class="form-check-input" type="radio" name="gender" id="gender-others" value="others"
+                            checked>
+                        <label class="form-check-label" for="gender-others">其他</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr class="my-4">
+            <div class="row g-3">
+                <!-- 聯絡方式 -->
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                </div>
+                <div class="col-sm-4">
+                    <label for="phone-home" class="form-label">住家電話</label>
+                    <input type="text" class="form-control" id="phone-home" placeholder="" value="">
+                </div>
+                <div class="col-sm-4">
+                    <label for="phone-work" class="form-label">工作地點電話</label>
+                    <input type="text" class="form-control" id="phone-work" placeholder="" value="">
+                </div>
+                <div class="col-sm-3">
+                    <label for="phone-mobile" class="form-label">手機</label>
+                    <input type="text" class="form-control" id="phone-mobile" placeholder="" value="" maxlength="10">
+                </div>
+
+                <!-- 永久地址 -->
+                <div class="col-md-2">
+                    <label for="address-main-region" class="form-label">永久地址</label>
+                    <select class="form-select" id="address-main-region" required>
+                        <option value="">(選擇地區)</option>
+                        <option>台灣</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        請選擇你居住的地區
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="address-main-city" class="form-label">&nbsp;</label>
+                    <select class="form-select" id="address-main-city" required>
+                        <option value="">(選擇城市)</option>
+                        <option>台北市</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        請選擇你居住的城市
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <label for="address-main-addr" class="form-label">&nbsp;</label>
+                    <input type="text" class="form-control" id="address-main-addr" placeholder="住址" required>
+                    <div class="invalid-feedback">
+                        請輸入地址
+                    </div>
+                </div>
+
+                <!-- 聯絡地址 -->
+                <div class="col-md-2">
+                    <label for="address-contact-region" class="form-label">聯絡地址</label>
+                    <select class="form-select" id="address-main-region">
+                        <option value="">(選擇地區)</option>
+                        <option>台灣</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label form-check-label-new1" for="same-address-1">同永久地址</label>
+                    <input class="form-check-input" type="checkbox" value="" id="same-address-1">
+                    <select class="form-select" id="address-contact-city">
+                        <option value="">(選擇城市)</option>
+                        <option>台北市</option>
+                    </select>
+                </div>
+                <div class="col-md-8">
+                    <label for="address-main-addr" class="form-label">&nbsp;</label>
+                    <input type="text" class="form-control" id="address-contact-addr" placeholder="聯絡地址">
+                </div>
+
+                <!-- 住房種類 -->
+                <div class="col-md-4">
+                    <label for="address-main-type" class="form-label">住房類型</label>
+                    <select class="form-select" id="address-main-type" required>
+                        <option value="">(選擇類型)</option>
+                        <option>自有房子/公寓</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        請選擇住房類型
+                    </div>
+                </div>
+                <div class="col-md-8"></div>
+
+                <!-- 工作地址 -->
+                <div class="col-md-2">
+                    <label for="address-work-region" class="form-label">工作地址</label>
+                    <select class="form-select" id="address-main-region">
+                        <option value="">(選擇地區)</option>
+                        <option>台灣</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="address-main-addr" class="form-label">&nbsp;</label>
+                    <select class="form-select" id="address-work-city">
+                        <option value="">(選擇城市)</option>
+                        <option>台北市</option>
+                    </select>
+                </div>
+                <div class="col-md-8">
+                    <label for="address-main-addr" class="form-label">&nbsp;</label>
+                    <input type="text" class="form-control" id="address-work-addr" placeholder="工作地址">
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row g-3">
+                <!-- 客戶背景 -->
+                <div class="col-md-3">
+                    <label for="birth-day" class="form-label">生日</label>
+                    <input type="date" class="form-select" id="birth-day" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="education" class="form-label">學歷</label>
+                    <input type="text" class="form-control" id="education" placeholder="">
+                </div>
+                <div class="col-md-4"></div>
+
+                <div class="col-md-3">
+                    <label for="family-type" class="form-label">婚姻狀況</label>
+                    <select class="form-select" id="family-type" required>
+                        <option value="">(選擇)</option>
+                        <option>已婚</option>
+                        <option>未婚</option>
+                        <option>同居</option>
+                        <option>離婚</option>
+                        <option>鰥寡</option>
+                        <option>未知</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        請選擇婚姻狀況
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="family-member" class="form-label">家庭成員數</label>
+                    <input type="text" class="form-control" id="family-member" placeholder="0">
+                </div>
+                <div class="col-md-3">
+                    <label for="family-child" class="form-label">子女數</label>
+                    <input type="text" class="form-control" id="family-child" placeholder="0">
+                </div>
+            </div>
+
+
+            <hr class="my-4">
+            <div class="row g-3">
+                <!-- 客戶收入/職業 -->
+                <div class="col-md-4">
+                    <label for="income-type" class="form-label">收入類型</label>
+                    <select class="form-select" id="income-type" required>
+                        <option value="">(選擇類型)</option>
+                        <option>工作</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        請選擇收入類型
+                    </div>
+                </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <label for="profession-type" class="form-label">職業</label>
+                    <select class="form-select" id="profession-type" required>
+                        <option value="">(選擇類型)</option>
+                        <option>勞工</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        請選擇職業
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="profession-org" class="form-label">工作機構類型</label>
+                    <select class="form-select" id="profession-org">
+                        <option value="">(選擇類型)</option>
+                        <option>有限責任公司/企業</option>
+                        <option>自雇</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="profession-date" class="form-label">現有工作到職日</label>
+                    <input type="date" class="form-select" id="profession-date">
+                </div>
+                <div class="col-md-10">
+                    <label for="income-amount" class="form-label">年收入</label>
+                    <div class="form-control adding-form-pattrn input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row g-3">
+                <!-- 申請種類 -->
+
+            </div>
+
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-secondary btn-lg" id="reset-all">重填</button>
+                <button class="btn btn-primary btn-lg" type="submit">送出</button>
+            </div>
+        </form>
+
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">2022 iSpan BDSE25 Group 2</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+
+    <script src="bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="things/form-validation.js"></script>
+</body>
+
+</html>

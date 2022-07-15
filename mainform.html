@@ -41,7 +41,7 @@
             <ul class="navbar-nav navbar-right">
                 <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
                 <li id="nav-login-btn" class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
-                <li id="nav-logout-btn" class="nav-item"><a href="#" class="nav-link">Sign out</a></li>
+                <!-- <li id="nav-logout-btn" class="nav-item"><a href="#" class="nav-link">Sign out</a></li> -->
             </ul>
         </div>
     </nav>
@@ -75,8 +75,7 @@
                         <label class="form-check-label" for="gender-male">男</label>
                         <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female">
                         <label class="form-check-label" for="gender-female">女</label>
-                        <input class="form-check-input" type="radio" name="gender" id="gender-others" value="others"
-                            checked>
+                        <input class="form-check-input" type="radio" name="gender" id="gender-others" value="others" checked>
                         <label class="form-check-label" for="gender-others">其他</label>
                     </div>
                 </div>
@@ -135,7 +134,7 @@
                 <!-- 聯絡地址 -->
                 <div class="col-md-2">
                     <label for="address-contact-region" class="form-label">聯絡地址</label>
-                    <select class="form-select" id="address-main-region">
+                    <select class="form-select" id="address-contact-region">
                         <option value="">(選擇地區)</option>
                         <option>台灣</option>
                     </select>
@@ -169,7 +168,7 @@
                 <!-- 工作地址 -->
                 <div class="col-md-2">
                     <label for="address-work-region" class="form-label">工作地址</label>
-                    <select class="form-select" id="address-main-region">
+                    <select class="form-select" id="address-work-region">
                         <option value="">(選擇地區)</option>
                         <option>台灣</option>
                     </select>
@@ -300,11 +299,11 @@
             <div class="row g-3">
                 <!-- 申請種類 -->
                 <div class="col-sm-4">
-                    <label for="apply-type" class="form-label">貸款種類</label>
+                    <label for="loans-type" class="form-label">貸款種類</label>
                     <div class="form-control adding-form-pattrn">
-                        <input class="form-check-input" type="radio" name="apply-type" id="apply-type1" value="apply-type1">
+                        <input class="form-check-input" type="radio" name="loans-type" id="loans-type-cash" value="loans-type-cash">
                         <label class="form-check-label" for="apply-type1">現金貸款</label>
-                        <input class="form-check-input" type="radio" name="apply-type" id="apply-type2" value="apply-type2">
+                        <input class="form-check-input" type="radio" name="loans-type" id="loans-type-revolving" value="loans-type-revolving">
                         <label class="form-check-label" for="apply-type2">循環貸款</label>
                     </div>
                 </div>

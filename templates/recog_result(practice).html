@@ -1,0 +1,26 @@
+{% extends "parts/base.html"%}
+{% block title %}req_obj{% endblock title %}
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='jquery/jquery-3.5.1.min.js') }}"></script>
+{{ moment.include_moment() }}
+{{ moment.locale('zh-tw') }}
+{% endblock scripts %}
+
+{% block page_content %}
+{{ super() }}
+
+
+<!-- practice start -->
+<div>
+    <h1>The Input Image:</h1>
+    <figure style="text-align: center;">
+        <img src="static/uploaded/{{img}}" alt="no input">
+        <!-- <img src="{{img}}" alt="no input"> -->
+    </figure>
+    <h1>The predict result is : </h1>
+    <h1 style="text-align: center;">{{result}}</h1>
+</div>
+<!-- practice end -->
+
+{% endblock page_content %}
